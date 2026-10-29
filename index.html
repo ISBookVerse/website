@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookVerse | ค้นพบโลกแห่งหนังสือ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Mitr:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#home" class="brand" data-page="home" aria-label="BookVerse หน้าแรก">
+      <span class="brand-icon">✦</span><span>Book<span class="brand-accent">Verse</span></span>
+    </a>
+    <button id="mobileMenu" class="mobile-menu" aria-label="เปิดเมนู">☰</button>
+    <nav id="navLinks" class="nav-links">
+      <a href="#home" data-page="home" class="active">หน้าแรก</a>
+      <a href="#explore" data-page="explore">สำรวจหนังสือ</a>
+      <a href="#graph" data-page="graph">Knowledge Graph</a>
+      <a href="#about" data-page="about">เกี่ยวกับโครงงาน</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">KNOWLEDGE · INTELLIGENCE · WISDOM</span>
+          <h1>ทุกเล่มมีเรื่องราว<br><span>ทุกความรู้มีจักรวาล</span></h1>
+          <p>ค้นพบหนังสือที่ใช่ ผ่านการเชื่อมโยงข้อมูลผู้แต่ง หมวดหมู่ และความสนใจของผู้อ่าน</p>
+          <form id="heroSearch" class="search-bar">
+            <span>⌕</span>
+            <input id="heroSearchInput" type="search" placeholder="ค้นหาชื่อหนังสือหรือผู้แต่ง..." aria-label="ค้นหาหนังสือ">
+            <button type="submit">ค้นหา</button>
+          </form>
+          <div class="hero-tags"><span>✦ ค้นหาหนังสือ</span><span>✦ สำรวจความสัมพันธ์</span><span>✦ ค้นพบเล่มใหม่</span></div>
+        </div>
+        <div class="hero-art" aria-label="ภาพประกอบหนังสือ">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="floating-book book-a"><span>THE<br>WORLD</span><small>OF IDEAS</small></div>
+          <div class="floating-book book-b"><span>KNOW<br>MORE</span><small>EVERY DAY</small></div>
+          <div class="floating-book book-c"><span>STORIES<br>WITHIN</span><small>BOOKVERSE</small></div>
+          <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div><div class="spark spark-three">✦</div>
+        </div>
+      </div>
+
+      <section class="stats-strip" aria-label="สถิติข้อมูลหนังสือ">
+        <div class="stat-item"><span class="stat-icon">▤</span><div><strong id="statBooks">300+</strong><small>หนังสือในคลังข้อมูล</small></div></div>
+        <div class="stat-item"><span class="stat-icon pink">✎</span><div><strong id="statAuthors">241+</strong><small>ผู้แต่งในกราฟ</small></div></div>
+        <div class="stat-item"><span class="stat-icon green">⌘</span><div><strong id="statLinks">300+</strong><small>ความสัมพันธ์หนังสือ–ผู้แต่ง</small></div></div>
+      </section>
+
+      <section class="section-wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">YOUR NEXT READ</span><h2>หนังสือแนะนำ</h2></div>
+          <button class="text-button" data-page="explore">ดูหนังสือทั้งหมด <span>→</span></button>
+        </div>
+        <div id="featuredBooks" class="book-grid"></div>
+      </section>
+
+      <section class="journey-section">
+        <div class="section-heading"><div><span class="eyebrow">THE AGE OF ABUNDANCE</span><h2>จากข้อมูล สู่ความเข้าใจ</h2></div><p>เดินทางผ่าน 3 ขั้นของการค้นพบความรู้</p></div>
+        <div class="journey-grid">
+          <article class="journey-card"><span class="journey-number">01</span><div class="journey-icon knowledge">▤</div><h3>Knowledge</h3><p>รวบรวมข้อมูลหนังสือและผู้แต่งให้ค้นหาได้ง่ายในที่เดียว</p></article>
+          <article class="journey-card"><span class="journey-number">02</span><div class="journey-icon intelligence">⌘</div><h3>Intelligence</h3><p>สำรวจความสัมพันธ์ของข้อมูล เพื่อมองเห็นสิ่งที่เชื่อมโยงกัน</p></article>
+          <article class="journey-card"><span class="journey-number">03</span><div class="journey-icon wisdom">✦</div><h3>Wisdom</h3><p>ใช้ความเข้าใจที่ได้ค้นพบเป็นจุดเริ่มต้นของการเรียนรู้ครั้งใหม่</p></article>
+        </div>
+      </section>
+
+      <section class="feature-band">
+        <div class="feature-symbol">◎</div>
+        <div><span class="eyebrow">MORE THAN A CATALOG</span><h2>หนังสือไม่ได้อยู่เพียงลำพัง</h2><p>มองเห็นความสัมพันธ์ระหว่างหนังสือ ผู้แต่ง และหมวดหมู่ ผ่านแนวคิด Knowledge Graph</p></div>
+        <button class="primary-button" data-go-graph>สำรวจกราฟความรู้ ↗</button>
+      </section>
+    </section>
+
+    <section id="explore" class="page">
+      <div class="page-heading"><span class="eyebrow">BOOK COLLECTION</span><h1>สำรวจหนังสือ</h1><p>ค้นหาและจัดเรียงหนังสือจากฐานข้อมูลหนังสือของ BookVerse</p></div>
+      <form id="exploreSearch" class="search-bar explore-search"><span>⌕</span><input id="exploreSearchInput" type="search" placeholder="ชื่อหนังสือ ผู้แต่ง หรือหมวดหมู่..." aria-label="ค้นหาหนังสือ"><button type="submit">ค้นหา</button></form>
+      <div class="filters">
+        <label>ปีที่พิมพ์<select id="yearSelect"><option value="">ทุกปี</option></select></label>
+        <label>ผู้แต่ง<select id="authorSelect"><option value="">ผู้แต่งทั้งหมด</option></select></label>
+        <label>เรียงลำดับ<select id="sortSelect"><option value="title">ชื่อหนังสือ A–Z</option><option value="year-desc">ปีพิมพ์ ใหม่–เก่า</option><option value="year-asc">ปีพิมพ์ เก่า–ใหม่</option><option value="author">ชื่อผู้แต่ง A–Z</option></select></label>
+        <button id="clearFilters" class="outline-button">ล้างตัวกรอง</button>
+      </div>
+      <p id="resultCount" class="result-count"></p>
+      <div id="allBooks" class="book-grid"></div>
+      <div id="emptyState" class="empty-state" hidden><span>⌕</span><h3>ไม่พบหนังสือที่ค้นหา</h3><p>ลองเปลี่ยนคำค้นหาหรือล้างตัวกรองดูนะ</p></div>
+    </section>
+
+    <section id="details" class="page">
+      <div class="detail-top"><button id="backToExplore" class="text-button">← กลับไปหน้าสำรวจ</button></div>
+      <div id="bookDetail" class="detail-content"></div>
+    </section>
+
+    <section id="graph" class="page">
+      <div class="page-heading"><span class="eyebrow">CONNECTED KNOWLEDGE</span><h1>Knowledge Graph</h1><p>ตัวอย่างการเชื่อมโยงระหว่างหนังสือ ผู้แต่ง และหมวดหมู่</p></div>
+      <div id="connectionStatus" class="connection-status">กำลังตรวจสอบการเชื่อมต่อ Neo4j…</div>
+      <div class="graph-notice"><strong>ข้อมูลจาก Neo4j Bloom:</strong> กราฟแสดงความสัมพันธ์จากไฟล์ Export ที่ได้รับ ส่วนรายการหนังสือทั้งหมดค้นหาได้ในหน้าสำรวจ</div>
+      <div class="graph-layout">
+        <div class="graph-panel"><div class="graph-toolbar"><span><i class="live-dot"></i> ข้อมูลจากไฟล์ Export</span><small>คลิกที่โหนดเพื่อดูรายละเอียด</small></div><div class="graph-canvas"><svg id="fullGraph" viewBox="0 0 800 500" role="img" aria-label="กราฟแสดงความสัมพันธ์ของหนังสือ"></svg></div></div>
+        <aside id="graphInfo" class="graph-info"><span class="info-icon">✧</span><h3>เลือกโหนดบนกราฟ</h3><p>คลิกที่หนังสือ ผู้แต่ง หรือหมวดหมู่ เพื่อดูข้อมูลและความสัมพันธ์</p></aside>
+      </div>
+      <div class="graph-legend"><span><i class="dot book-dot"></i> หนังสือ</span><span><i class="dot author-dot"></i> ผู้แต่ง</span><span><i class="dot category-dot"></i> หมวดหมู่</span></div>
+    </section>
+
+    <section id="about" class="page">
+      <div class="page-heading"><span class="eyebrow">ABOUT THE PROJECT</span><h1>เกี่ยวกับ BookVerse</h1><p>จากข้อมูลหนังสือ สู่การค้นพบองค์ความรู้ที่เชื่อมโยงกัน</p></div>
+      <div class="about-card">
+        <div class="about-mark">✦</div>
+        <h2>BookVerse คืออะไร?</h2>
+        <p>BookVerse เป็นแนวคิดเว็บไซต์ต้นแบบสำหรับสำรวจข้อมูลหนังสือ โดยนำเสนอการค้นหา การกรองข้อมูล และแนวคิด Knowledge Graph เพื่อแสดงความสัมพันธ์ระหว่างหนังสือ ผู้แต่ง และหมวดหมู่</p>
+        <h3>เป้าหมายของโครงงาน</h3>
+        <ul><li>จัดระเบียบข้อมูลหนังสือให้ค้นหาได้สะดวก</li><li>แสดงความสัมพันธ์ของข้อมูลในรูปแบบกราฟความรู้</li><li>อ่านข้อมูลจากฐานข้อมูล Neo4j โดยตรงเมื่อกำหนดค่าการเชื่อมต่อ</li></ul>
+        <div class="about-pill-row"><span>✦ Data exploration</span><span>⌘ Knowledge Graph</span><span>▤ Book discovery</span></div>
+        <div class="project-status"><strong>แหล่งข้อมูล:</strong> ไฟล์ส่งออกจาก Neo4j Bloom ที่ใช้ในโครงงาน ข้อมูลบางช่อง เช่น ปีที่พิมพ์และสำนักพิมพ์ไม่มีค่าในไฟล์ จึงแสดงเป็น “ไม่ระบุ” โดยไม่เติมข้อมูลขึ้นเอง</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a href="#home" class="brand" data-page="home"><span class="brand-icon">✦</span><span>Book<span class="brand-accent">Verse</span></span></a><p>เปิดหน้าหนังสือ แล้วออกเดินทางสู่โลกแห่งความรู้</p><small>BookVerse · Knowledge Graph Project</small></footer>
+  <a href="#home" class="back-top" aria-label="กลับขึ้นด้านบน">↑</a>
+  <script src="graph-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
